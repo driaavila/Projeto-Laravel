@@ -3,8 +3,8 @@
 @section('title', 'Livre na Cozinha')
 
 @section('content')
-
-    <h1>Algum Título</h1>
-    <img src="" alt="rosca">
+    @foreach ($receitas as $receitas)
+    <p>{{ $receitas->title }}</p>
+    @endforeach
 
 @endsection

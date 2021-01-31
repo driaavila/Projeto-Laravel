@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Receita;
 
 class ReceitaController extends Controller
 {
     public function index(){
-        return view('welcome');
+        $receitas = Receita::all();
+        return view('welcome', ['receitas' => $receitas]);
     }
 
     public function create(){

@@ -18,11 +18,3 @@ use App\Http\Controllers\ReceitaController;
 Route::get('/', [ReceitaController::class, 'index']);
 Route::get('/receitas/create', [ReceitaController::class, 'create']);
 
-Route::get('/produtos', function () {
-    $busca = request('search');
-    return view('products', ['busca' => $busca]);
-});
-
-Route::get('/products_teste/{id?}', function ($id = null) {
-    return view('product', ['id' => $id]);
-});
