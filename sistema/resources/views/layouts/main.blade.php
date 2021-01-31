@@ -23,14 +23,14 @@
          <nav class="navbar navbar-expand-lg navbar-light">
          <div class="collapse navbar-collapse" id="navbar">
          <a href="" class="navbar-brand">
-         <img src="" alt="Livre na Cozinha">
+         <img src="/img/cozinhalivre.png" alt="Livre na Cozinha">
          </a>
          <ul class="navbar-nav">
          <li class="nav-item">
          <a href="/" class="nav-link">Receitas</a>
          </li>
          <li class="nav-item">
-         <a href="/events/create" class="nav-link">Cadastrar Receitas</a>
+         <a href="/receitas/create" class="nav-link">Cadastrar Receitas</a>
          </li>
          <li class="nav-item">
          <a href="/" class="nav-link">Entrar</a>

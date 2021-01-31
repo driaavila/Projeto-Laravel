@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\ReceitaController;
+
+Route::get('/', [ReceitaController::class, 'index']);
+Route::get('/receitas/create', [ReceitaController::class, 'create']);
 
 Route::get('/produtos', function () {
     $busca = request('search');
