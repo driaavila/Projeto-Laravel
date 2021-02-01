@@ -8,8 +8,8 @@ use App\Models\Receita;
 class ReceitaController extends Controller
 {
     public function index(){
-        $receitas = Receita::all();
-        return view('welcome', ['receitas' => $receitas]);
+        $receita = Receita::all();
+        return view('welcome', ['receita' => $receita]);
     }
 
     public function create(){
@@ -23,8 +23,30 @@ class ReceitaController extends Controller
         $receita->ingredients = $request->ingredients;
         $receita->preparation = $request->preparation;
 
+        //Image Upload
+        if($request->hasFile('image') && $request->file("image")->isValid()) {
+
+            $requestImage = $request->image;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName().strtotime("now").".".$extension);
+
+            $requestImage->move(public_path('img/receitas'), $imageName);
+
+            $receita->image = $imageName;
+        }
+
         $receita->save();
 
-        return redirect('/');
+        return redirect('/')->with('msg', 'Receita cadastrada com sucesso!');
+    }
+
+    public function show($id){
+        $receita = Receita::findOrFail($id);
+
+        return view('receitas.show', ['receita' => $receita]);
     }
 }
+
+

@@ -6,8 +6,12 @@
 
 <div id="receitas-create-container" class="col-md-6 offset-md-3">
     <h1>Cadastre sua Receita</h1>
-    <form action="/receitas" method="POST">
+    <form action="/receitas" method="POST" enctype="multipart/form-data">
     @csrf
+        <div class="form-group">
+            <label for="image">Imagem da Receita:</label>
+            <input type="file" id="image" name="image" class="form-control-file">
+        </div>
         <div class="form-group">
             <label for="title">Receita:</label>
             <input type="text" class="form-control" id="title" name="title" palceholder="Nome da REceita">

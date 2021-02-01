@@ -17,4 +17,5 @@ use App\Http\Controllers\ReceitaController;
 
 Route::get('/', [ReceitaController::class, 'index']);
 Route::get('/receitas/create', [ReceitaController::class, 'create']);
+Route::get('/receitas/{id}', [ReceitaController::class, 'show']);
 Route::post('/receitas', [ReceitaController::class, 'store']);
