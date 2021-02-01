@@ -4,6 +4,24 @@
 
 @section('content')
 
-<h1>Cadastre uma Receita</h1>
+<div id="receitas-create-container" class="col-md-6 offset-md-3">
+    <h1>Cadastre sua Receita</h1>
+    <form action="/receitas" method="POST">
+    @csrf
+        <div class="form-group">
+            <label for="title">Receita:</label>
+            <input type="text" class="form-control" id="title" name="title" palceholder="Nome da REceita">
+        </div>
+        <div class="form-group">
+            <label for="title">Ingredientes:</label>
+            <textarea name="ingredients" id="ingredients" class="form-control" placeholder="Insira os ingredientes necessários para essa receita"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="title">Modo de preparo:</label>
+            <textarea name="preparation" id="preparation" class="form-control" placeholder="Modo de preparo da receita"></textarea>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Cadastrar receita">
+    </form>
+</div>
 
 @endsection

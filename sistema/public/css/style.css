@@ -112,6 +112,19 @@ footer{
     width: 100%;
 }
 
+#receitas-create-container{
+    padding: 30px;
+}
+
+#receitas-create-container label{
+    font-weight: bold;
+}
+
+#receitas-create-container input,
+#receitas-create-container textarea{
+    font-size: 12px;
+}
+
 footer p {
     margin-bottom: 0;
 }
