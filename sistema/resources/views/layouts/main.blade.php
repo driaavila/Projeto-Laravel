@@ -55,9 +55,9 @@
                 </div>
             </div>
     </main>
-    <footer>
+    <div class="footer">
         <p>Livre na Cozinha &copy; 2021</p>
-    </footer>
+</div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     </body>
 </html>

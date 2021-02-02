@@ -8,11 +8,24 @@ use App\Models\Receita;
 class ReceitaController extends Controller
 {
     public function index(){
-        $receita = Receita::all();
-        return view('welcome', ['receita' => $receita]);
+
+        $search = request('search');
+
+        if($search){
+
+            $receita = Receita::where([
+                ['title', 'like', '%'.$search.'%']
+            ])->get();
+
+        } else {
+            $receita = Receita::all();
+        }        
+        
+        return view('welcome', ['receita' => $receita, 'search' => $search]);
     }
 
     public function create(){
+
         return view('receitas.create');
     }
 

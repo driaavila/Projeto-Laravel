@@ -82,7 +82,7 @@ header{
 }
 
 #receitas-container {
-    padding: 50px;    
+    padding: 50px; 
 }
 
 #receitas-container h2 {
@@ -112,15 +112,13 @@ header{
     border-top-right-radius: 10px;
 }
 
-footer{
-    text-align: center;
-    background-color: teal;
-    color: #fff;
-    padding-left: 30px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
+.card .card-title {
+    color: #091107;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
 
 #receitas-create-container{
     padding: 30px;
@@ -135,7 +133,43 @@ footer{
     font-size: 12px;
 }
 
-footer p {
-    margin-bottom: 0;
+#image-container,
+#info-container {
+  margin-top: 30px;
+}
+
+#image-container img {
+  border-radius: 10px;
+}
+
+#info-container h1 {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+#info-container p {
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+  }
+  
+  #info-container h4 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+/* footer */
+.footer{
+    text-align: center;
+    background-color: teal;
+    color: #fff;
+    padding-left: 30px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 10px;
 }
 

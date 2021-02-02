@@ -11,8 +11,13 @@
         </div>
         <div id="info-container" class="col-md-6">
             <h1> {{ $receita->title}} </h1>
-            
+            <h4> Ingredientes: </h4>
+            <p> {{ $receita->ingredients}} </p>
+            <hr>
+            <h4> Modo de preparo: </h4>
+           <p> {{ $receita->preparation}} </p>
         </div>
+
     </div>
 
 </div>
