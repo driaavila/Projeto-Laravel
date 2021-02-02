@@ -16,7 +16,9 @@
             <hr>
             <h4> Modo de preparo: </h4>
            <p> {{ $receita->preparation}} </p>
+            <h5 class="receita-owner"><ion-icon name="star-outline"></ion-icon> {{ $receitasOwner['name'] }} </h5>
         </div>
+        
 
     </div>
 

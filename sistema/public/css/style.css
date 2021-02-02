@@ -24,6 +24,7 @@ header{
 .btn-primary{
     background-color: #05b81a ;
     border: 2px solid green;
+    margin-top: 20px;
 }
 
 .btn-primary:hover{
@@ -153,10 +154,16 @@ header{
     display: flex;
   }
   
-  #info-container h4 {
+#info-container h4 {
     font-size: 20px;
     font-weight: bold;
   }
+
+#info-container h5{
+    margin-top: 15px;
+    font-size: 15px;
+    color: #155724;
+}
 
 /* footer */
 .footer{
@@ -164,7 +171,7 @@ header{
     background-color: teal;
     color: #fff;
     padding-left: 30px;
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }

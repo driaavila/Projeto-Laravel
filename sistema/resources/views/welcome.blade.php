@@ -16,9 +16,10 @@
         @else
         <h2>Outras Receitas</h2>
         <p class="subtitle">Receitas em destaque </p>
-        @endif       
+        @endif      
 
         <div id="cards-container" class="row">
+            
             @foreach($receita as $receita)
             <div class="card col-md-3">
                 <img src="/img/receitas/{{ $receita->image }}" alt="{{ $receita->title }}" > 
@@ -29,7 +30,5 @@
             </div>
             @endforeach
         </div>
-
     </div>
-
 @endsection

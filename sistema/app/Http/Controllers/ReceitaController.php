@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Receita;
+use App\Models\User;
 
 class ReceitaController extends Controller
 {
@@ -50,6 +51,10 @@ class ReceitaController extends Controller
             $receita->image = $imageName;
         }
 
+        $user = auth()->user();
+        $receita->user_id = $user->id;
+
+        
         $receita->save();
 
         return redirect('/')->with('msg', 'Receita cadastrada com sucesso!');
@@ -58,7 +63,9 @@ class ReceitaController extends Controller
     public function show($id){
         $receita = Receita::findOrFail($id);
 
-        return view('receitas.show', ['receita' => $receita]);
+        $receitaOwner = User::where('id', $receita->user_id)->first()->toArray();
+
+        return view('receitas.show', ['receita' => $receita, 'receitasOwner' => $receitaOwner]);
     }
 }
 
