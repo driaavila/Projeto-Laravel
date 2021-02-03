@@ -24,7 +24,7 @@
                 <td scropt="row">{{ $loop->index +1 }}</td>
                 <td><a href="/receitas/{{ $receitas->id }}">{{ $receitas->title }}</a></td>
                 <td>
-                    <a href="#" class="btn btn-info edit-btn"><ion-icon name ="create-outline"></ion-icon>
+                    <a href="/receitas/edit/{{ $receitas->id }}" class="btn btn-info edit-btn"><ion-icon name ="create-outline"></ion-icon>
                     Editar
                     </a> 
                     <form action="/receitas/{{ $receitas->id }}" method="POST">

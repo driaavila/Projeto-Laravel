@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel = 'shortcut icon' href= "/img/icon-cozinhalivre.png" type = "image/x-icon"/>
 
         <title>@yield('title')</title>
 
@@ -20,10 +21,11 @@
        
     </head>
    <header>
+       
          <nav class="navbar navbar-expand-lg navbar-light">
          <div class="collapse navbar-collapse" id="navbar">
          <a href="" class="navbar-brand">
-         <img src="/img/cozinhalivre.png" alt="Livre na Cozinha">
+         <img src="/img/livrenacozinha.png" alt="Livre na Cozinha">
          </a>
          <ul class="navbar-nav">
          <li class="nav-item">

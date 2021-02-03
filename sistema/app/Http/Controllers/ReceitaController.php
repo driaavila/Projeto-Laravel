@@ -85,6 +85,35 @@ class ReceitaController extends Controller
         return redirect('/dashboard')->with('msg', 'Receita excluída com sucesso!');
 
     }
+
+    public function edit($id){
+        $receitas = Receita::findOrFail($id);
+
+        return view('receitas.edit', ['receitas' => $receitas]);
+    }
+
+    public function update(Request $request){
+
+        $data = $request->all();
+
+        if($request->hasFile('image') && $request->file("image")->isValid()) {
+
+            $requestImage = $request->image;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName().strtotime("now").".".$extension);
+
+            $requestImage->move(public_path('img/receitas'), $imageName);
+
+            $data['image'] = $imageName;
+        }
+
+        Receita::findOrFail($request->id)->update($data);
+
+        return redirect('/dashboard')->with('msg', 'Receita editada com sucesso!');
+
+    }
 }
 
 

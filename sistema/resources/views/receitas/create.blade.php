@@ -24,7 +24,7 @@
             <label for="title">Modo de preparo:</label>
             <textarea name="preparation" id="preparation" class="form-control" placeholder="Modo de preparo da receita"></textarea>
         </div>
-        <input type="submit" class="btn btn-primary" value="Cadastrar receita">
+        <input type="submit" class="btn btn-primary" value="Cadastrar Receita">
     </form>
 </div>
 
