@@ -19,7 +19,7 @@
         @endif      
 
         <div id="cards-container" class="row">
-            
+
             @foreach($receita as $receita)
             <div class="card col-md-3">
                 <img src="/img/receitas/{{ $receita->image }}" alt="{{ $receita->title }}" > 
@@ -27,8 +27,11 @@
                     <h5 class="card-title">{{ $receita->title }}</h5> 
                     <a href="/receitas/{{ $receita->id }}" class="btn btn-primary">Saber mais</a>
                 </div>
+
             </div>
+
             @endforeach
         </div>
     </div>
 @endsection
+

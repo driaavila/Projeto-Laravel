@@ -165,13 +165,26 @@ header{
     color: #155724;
 }
 
+.dashboard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-receitas-container th{
+    width: 25%;
+}
+
+.dashboard-receitas-container form{
+    display: inline-block;
+}
+
 /* footer */
 .footer{
     text-align: center;
     background-color: teal;
     color: #fff;
     padding-left: 30px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }

@@ -19,7 +19,8 @@ Route::get('/', [ReceitaController::class, 'index']);
 Route::get('/receitas/create', [ReceitaController::class, 'create'])->middleware('auth');
 Route::get('/receitas/{id}', [ReceitaController::class, 'show']);
 Route::post('/receitas', [ReceitaController::class, 'store']);
+Route::delete('/receitas/{id}', [ReceitaController::class, 'destroy']);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/dashboard', [ReceitaController::class, 'dashboard'])->middleware('auth');
+
+

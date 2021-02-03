@@ -67,6 +67,24 @@ class ReceitaController extends Controller
 
         return view('receitas.show', ['receita' => $receita, 'receitasOwner' => $receitaOwner]);
     }
+
+    public function dashboard(){
+
+        $user = auth()->user();
+
+        $receitas = $user->receitas;
+
+        return view('receitas.dashboard', ['receitas' => $receitas]);
+
+    }
+
+    public function destroy($id){
+
+        Receita::findOrFail($id)->delete();
+
+        return redirect('/dashboard')->with('msg', 'Receita excluída com sucesso!');
+
+    }
 }
 
 
