@@ -87,7 +87,14 @@ class ReceitaController extends Controller
     }
 
     public function edit($id){
+
+        $user = auth()->user();
+
         $receitas = Receita::findOrFail($id);
+
+        if($user->id != $receitas->user_id){
+            return redirect('/dashboard');
+        }
 
         return view('receitas.edit', ['receitas' => $receitas]);
     }
